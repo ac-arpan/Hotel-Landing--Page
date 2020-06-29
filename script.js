@@ -9,6 +9,10 @@ const secondHeading = secondSection.firstElementChild
 const secondPara = document.querySelector('.second p')
 
 const thirdHeading = thirdSection.firstElementChild
+const cardOne = document.getElementById('card1')
+const cardTwo = document.getElementById('card2')
+const cardThree = document.getElementById('card3')
+
 
 const lastImg = document.querySelector('.pimg4')
 const lastText = document.querySelector('.last-text')
@@ -25,19 +29,20 @@ window.addEventListener('scroll', () => {
         firstHeading.style.animation = 'heading 0.5s forwards ease-out';
         firstPara.style.animation = 'heading 0.5s forwards ease-out';
     }
-    if(thirdSection.offsetTop - window.scrollY < 500) {
+    if(thirdSection.offsetTop - window.scrollY < 600) {
         thirdHeading.style.animation = 'heading 0.5s forwards ease-out';
+        cardOne.style.animation = 'card 0.5s forwards ease-out 0.5s'
+        cardTwo.style.animation = 'card 0.5s forwards ease-out 0.7s'
+        cardThree.style.animation = 'card 0.5s forwards ease-out 0.9s'
     }
     
     if(lastImg.offsetTop - window.scrollY < 5 ){
-        console.log('i ma in');
         
         lastText.style.animation = 'largemove 1s forwards ease-out';
         contact.style.animation = 'custom 0.5s forwards ease-out';
         icons.style.animation = 'customone 0.5s forwards ease-out 1s';
     }
     
-    console.log(lastImg.offsetTop - window.scrollY);
     
 
 })
