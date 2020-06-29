@@ -1,0 +1,315 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #666
+}
+
+.pimg1 {
+    background: url('./img/first.jpg') no-repeat center center/cover;
+    min-height: 100%;
+}
+.pimg2 {
+    background: url('./img/second.jpg') no-repeat center center/cover;
+    min-height: 600px;
+}
+.pimg3 {
+    background: url('./img/third.jpg') no-repeat center center/cover;
+    min-height: 600px;
+}
+.pimg4 {
+    background: url('./img/last.jpg') no-repeat center center/cover rgb(210, 248, 149);
+    background-blend-mode: darken;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pimg1, .pimg2, .pimg3 , .pimg4{
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+.section p{
+    opacity:0;
+}
+.section h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.section-light{
+    background: #f4f4f4;
+    color: #666;
+}
+.section-dark {
+    background: #282e34;
+    color: #ddd;
+}
+
+.pimg1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: center;
+}
+.ptext{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    animation: move 2s ease-out forwards;
+}
+.text-pink{
+    color:rgb(255, 36, 36);
+    font-weight: 600;
+}
+.text-small {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 240, 180);
+    opacity: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: moveslow 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.pbtn{
+    margin-top: -170px;
+    width: 100%;
+}
+.btn{
+    display: block;
+    width:200px;
+    height: 50px;
+    background-color: rgb(255, 36, 36);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px auto;
+    outline: none;
+    opacity: 0;
+    animation: moveslowbtn 0.3s ease-out forwards;
+    animation-delay: 3s;
+}
+.last-text {
+    text-transform: uppercase;
+    color: rgb(255, 36, 36);
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    opacity: 0
+}
+.contact{
+    color:rgb(255, 36,36);
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin-top: 400px;
+}
+.icons {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    color: rgb(255, 36, 36);
+    font-size: 40px;
+    margin-top: 10px;
+    opacity: 0;
+}
+.icons i {
+    margin: 0 20px;
+}
+
+/*CARDS*/
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cards > div {
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 6px 0px gray;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card:hover .img-sm,
+.card:focus .img-sm,
+.card:hover .f-text{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.card > div{
+    height: 50%;
+    width: 100%;
+}
+#card1 .img-sm{
+    transition: all 0.5s;
+    background: url('./img/swim.jpg') no-repeat center bottom/cover;
+}
+#card2 .img-sm{
+    transition: all 0.5s;
+    background: url('./img/wifi.jpg') no-repeat center center/cover;
+}
+#card3 .img-sm{
+    transition: all 0.5s;
+    background: url('./img/gym.jpg') no-repeat center bottom/cover;
+}
+.img-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-sm .f-text{
+    font-style: italic;
+    background-color: rgb(211, 206, 206);
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.507);
+    font-weight: 600;
+    opacity: 0;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.card-content{
+    display: flex;
+    align-items: center;
+}
+.card-content .icon-sm{
+    width: 30%;
+    height: 100%;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-content .text-sm{
+    width: 70%;
+    height: 100%;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+
+
+
+@keyframes move {
+    0%{
+        margin-top: -100px;
+    }
+    75%{
+        margin-top: 80px;
+    }
+    100%{
+        margin-top: 40px;
+    }
+}
+@keyframes moveslow {
+    from{
+        opacity: 0;
+        margin-top: 10px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes moveslowbtn {
+    from{
+        opacity: 0;
+        margin-top: 30px;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        margin-top: 10px;
+        transform: scale(1);
+    }
+}
+@keyframes heading {
+    from{
+        opacity: 0;
+        margin-top: 20px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+    
+}
+@keyframes largemove {
+    from{
+        opacity: 0;
+        margin-top:100px;
+    }
+    to{
+        opacity:1;
+        margin-top:50px;
+    }
+}
+
+@keyframes custom {
+    from  {
+        margin-top: 450px;
+    }
+    to {
+        margin-top: 400px;
+    }
+}
+@keyframes customone {
+    from  {
+        margin-top: 20px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
+@media only screen and (max-width:500px) {
+    .ptext {
+        font-size: 45px;
+    }
+    .last-text{
+        font-size: 30px;
+    }
+    .contact{
+        font-size:20px;
+    }
+    .icons{
+        font-size: 20px;
+    }
+}
